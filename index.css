@@ -1,0 +1,145 @@
+body{
+	background-color: slategrey;
+	background-attachment: fixed;
+	margin: 20px;
+	display: flow-root;
+
+}
+#header_text{
+
+	color: rgb(99, 0, 90, 1.0);
+}
+
+header{
+	background-size: cover;
+	background-image: url("piano.jpg");
+	background-position: center;
+	background-attachment: fixed;
+	border-style: solid;
+	border-color: rgba(255, 250, 40, .5);
+	border-radius: 15px;
+	display: flow-root;
+}
+main{
+
+	background-color: beige;
+}
+img{
+
+	width: 75px;
+	height: 75px;
+}
+
+div{
+
+	background-color: blue;
+	display:inline-block;
+}
+#img1:hover{
+
+	background-color: darkred;
+	border-color: rgba(0, 220, 0, 1.0);
+	border-radius: 8px;
+	box-shadow: 8px 8px 5px;
+	
+}
+#img2:hover{
+
+	background-color: darkred;
+	border-color: rgba(0, 220, 0, 1.0);
+	border-radius: 8px;
+	box-shadow: 8px 8px 5px;
+}
+#img3:hover{
+
+	background-color: darkred;
+	border-color: rgba(0, 220, 0, 1.0);
+	border-radius: 8px;
+	box-shadow: 8px 8px 5px;
+}
+#img4:hover{
+
+	background-color: darkred;
+	border-color: rgba(0, 220, 0, 1.0);
+	border-radius: 8px;
+	box-shadow: 8px 8px 5px;
+}
+#img5:hover{
+
+	background-color: darkred;
+	border-color: rgba(0, 220, 0, 1.0);
+	border-radius: 8px;
+	box-shadow: 8px 8px 5px;
+}
+#img5:hover{
+
+	background-color: darkred;
+	border-color: rgba(0, 220, 0, 1.0);
+	border-radius: 8px;
+	box-shadow: 8px 8px 5px;
+}
+#img6:hover{
+
+	background-color: darkred;
+	border-color: rgba(0, 220, 0, 1.0);
+	border-radius: 8px;
+	box-shadow: 8px 8px 5px;
+}
+#img7:hover{
+
+	background-color: darkred;
+	border-color: rgba(0, 220, 0, 1.0);
+	border-radius: 8px;
+	box-shadow: 8px 8px 5px;
+}
+
+#img1:active{
+
+	background-color: red;
+	border-color: rgba(0, 220, 0, 1.0);
+	border-radius: 8px;
+	box-shadow: 4px 4px 4px;
+	
+}
+#img2:active{
+
+	background-color: red;
+	border-color: rgba(0, 220, 0, 1.0);
+	border-radius: 8px;
+	box-shadow: 4px 4px 4px;
+}
+#img3:active{
+
+	background-color: red;
+	border-color: rgba(0, 220, 0, 1.0);
+	border-radius: 8px;
+	box-shadow: 4px 4px 4px;
+}
+#img4:active{
+
+	background-color: red;
+	border-color: rgba(0, 220, 0, 1.0);
+	border-radius: 8px;
+	box-shadow: 4px 4px 4px;
+}
+#img5:active{
+
+	background-color: red;
+	border-color: rgba(0, 220, 0, 1.0);
+	border-radius: 8px;
+	box-shadow: 4px 4px 4px;
+}
+#img6:active{
+
+	background-color: red;
+	border-color: rgba(0, 220, 0, 1.0);
+	border-radius: 8px;
+	box-shadow: 4px 4px 4px;
+}
+#img7:active{
+
+	background-color: red;
+	border-color: rgba(0, 220, 0, 1.0);
+	border-radius: 8px;
+	box-shadow: 4px 4px 4px;
+}
