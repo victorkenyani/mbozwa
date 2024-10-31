@@ -1,99 +1,46 @@
-let iparr = [];
-let inputarrays=[];
-//ten = document.getElementById("img1")
-let ips = "123.123.123.12"
-//database();
-b1=document.getElementById("img1")
-b1.onclick = btn10;
-document.getElementById("img2").onclick = btn10;
-document.getElementById("img3").onclick = btn10;
-document.getElementById("img4").onclick = btn10;
-document.getElementById("img5").onclick = btn10;
-document.getElementById("img6").onclick = btn10;
-document.getElementById("img7").onclick = btn10;
-t1 = b1.value;
-ip_to_binary()
-function ip_to_binary(e){
-	disp ("ip"+e)
-};
+let headers = new Headers();
 
-function btn10(){
+headers.append("Content-Type", "application/json");
 
-	mdata = JSON.stringify(database(ips,t1,t1 )[1].code);
-	disp(b1.value);
-}
-// disp(json_database());
-json_database2();
-
-function json_database(pos=0){
-	return JSON.stringify(database()[pos]);
-}
-
-function database(ip = "123.456.789.0",code = "QDGE56",status = "ACTIVE"){
-	const data = {"ip":ip, "code":code, "status":status};
-	inputarrays.push(data);
-	inputarrays.join(',');
-	const dataArrays = [data];
-	return inputarrays;
-
-}
+headers.append("Authorization", "Bearer i5i1a22PMc0mlKsCW2PrGnSejxAE");
 
 
-function disp(argument) {
-	console.log(argument);
-}
+fetch("https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest", {
 
-function json_database2(){
+  method: 'POST',
 
-	
-	myjson = {
-		"p123p456p789p0":{
-			"code":"MPESAD12",
-			"start":   "20240114003001",
-			"duration":"00000000004000",
-			"stop":    "20240114004001",
-			"status":  "ACTIVE"
-		},
+  headers,
 
-		"p123p456p789p1":{
-			"code":"MPErr12",
-			"start":   "20240114003001",
-			"duration":"00000000004000",
-			"stop":    "20240114004001",
-			"status":  "ACTIVE"
-		},
+  body: JSON.stringify({
 
-		"p123p456p789p2":{
-			"code":"MPESAD1r",
-			"start":   "20240114003001",
-			"duration":"00000000004000",
-			"stop":    "20240114004001",
-			"status":  "ACTIVE"
-		}
-	}
-	try{
-		path = 'data.json';
-		fetch(path).then(response =>response.json()).then(value => myjson);
-	}catch (err){
-		disp('error'+
-			err)
-	}
+    "BusinessShortCode": 174379,
 
-	dta = JSON.stringify(myjson);
-	dta2 = JSON.parse(dta);
+    "Password": "MTc0Mzc5YmZiMjc5ZjlhYTliZGJjZjE1OGU5N2RkNzFhNDY3Y2QyZTBjODkzMDU5YjEwZjc4ZTZiNzJhZGExZWQyYzkxOTIwMjQxMDMxMjEyNDQ4",
 
+    "Timestamp": "20241031212448",
 
-	disp(dta2.p123p456p789p1.code);
-	disp(dta2.p123p456p789p1.start);
-	disp(dta2.p123p456p789p1.status);
+    "TransactionType": "CustomerPayBillOnline",
 
-}
+    "Amount": 1,
 
+    "PartyA": 254793465937,
 
+    "PartyB": 174379,
 
-// fetch("background/data.json").then(response =>response.json()).then(value => jsonfile(value));
+    "PhoneNumber": 254793465937,
 
-// function jsonfile(f){
-// b1.textContent=f.ip
+    "CallBackURL": "https://mydomain.com/path",
 
-// }
+    "AccountReference": "CompanyXLTD",
+
+    "TransactionDesc": "Payment of X" 
+
+  })
+
+})
+
+  .then(response => response.text())
+
+  .then(result => console.log(result))
+
+  .catch(error => console.log(error));
