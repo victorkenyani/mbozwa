@@ -416,7 +416,7 @@ function pp2() {
     clearTimeout(iny) 
     t=0
 }
-const ps = false;
+var ps = false;
 function PLAYSTOP() {
     ps=!ps
     if(ps){
