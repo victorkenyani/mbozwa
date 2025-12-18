@@ -90,7 +90,7 @@ container.innerHTML=
         <p>Number of oscillators</p>
         <input id="NoOsc" type="number" min="1" max="12" value="6" step="1" id="NoOsc">
     </div>
-    <div><button onclick="PLAY()">test</button><button onclick="save()">save</button><button onclick="renamevalues()">create New</button></div>
+    <div><button onclick="PLAYSTOP()">test</button><button onclick="PLAY()">test</button><button onclick="save()">save</button><button onclick="renamevalues()">create New</button></div>
     <div id="oscillators"></div>
     <div id=detuner>
         <select id='interval'>
@@ -416,3 +416,14 @@ function pp2() {
     clearTimeout(iny) 
     t=0
 }
+const ps = false;
+function PLAYSTOP() {
+    ps=!ps
+    if(ps){
+        pp()
+    }else{
+        pp2()
+    }
+}
+
+
