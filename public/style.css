@@ -1,0 +1,143 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-variant-caps: all-petite-caps;
+
+}
+@font-face {
+  font-family: myFont; /* set name */
+  src: url('Twelve Voltz.ttf'); /* url of the font */
+  font-family: segment;
+  src: url('14 Segment LED Regular.ttf');
+}
+
+.screen {
+  font-family: myFont; /* use font */
+}
+/*
+piano
+*/
+.piano{
+    display: none;
+}
+.outline, .piano, .sound{
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.pianoholder{
+    display: inline-block;
+    height: 40%;
+}
+.keys{
+    top: 2px;
+    border-radius: 0px 0px 5px 5px;
+    position: absolute;
+    margin-left: 2px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    font-family: myFont;
+    color: #080;
+    font-weight: bold;
+  
+}
+.black{
+    height: 60%;
+    background-color: #221;
+}
+.white{
+    background-color: white;
+    height: 98%;
+
+}
+/*
+
+*/
+container{
+    position:none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 1px black solid;
+    display: flex;
+}
+.sound{
+    display: flex;
+}
+main footer header{
+    position: relative;
+    overflow: hidden;
+}
+header{
+    background-color: green;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    height: 65px;
+    overflow: scroll;
+}
+header .buttons button{
+/*    display: block;*/
+    width: 75%;
+
+}
+header .buttons, .inputsnum, .screen{
+    margin-left: 4px;
+    margin-right: 4px;
+    text-align: center;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+}
+header .inputsnum label{
+    
+    display: block;
+}
+header .screen{
+    font-weight: bolder;
+    color: #292;
+    display: block;
+    height: 100%;
+    background-color: #000;
+}
+
+header .inputsnum input{
+    background-color: green;
+/*    float: right;*/
+    text-align: center;
+    font-family: segment;
+    font-size: 2.5rem;
+    width: 100%;
+/*    width: 50%;*/
+    border: none;
+}
+header .inputsnum{
+    background-color: green;
+}
+main{
+    margin-left: 2px;
+    margin-right: 2px;
+    position: relative;
+/*    height: 40%;*/
+    flex-grow: 2;
+    background: red;
+    overflow: scroll hidden;
+}
+footer{
+/*    height: 40%;*/
+    flex-grow: 2;
+    background-color: #767;
+}
+
+
+body{
+    overflow: hidden;
+}
+

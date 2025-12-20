@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>MBOZWAPIANO</title>
+</head>
+
+<body>
+    <div class="outline">
+
+        <div id="container">
+           
+        </div>
+        <div class="piano" id="piano">
+            <header>
+                <div class="buttons">
+                    <button id="play">play</button>
+                    <button id="rec">rec</button>
+                    <button id="stop">stop</button>
+                </div>
+                <div class="inputsnum">
+                   <label>speed</label>
+                    <input type="number" min="020"max="200"step ='any' value="000">
+                </div>
+                <div class='inputsnum'>
+                    <label>volume</label>
+                    <input id="Volume" type="number" min="0" max="10" step="0.1" value="1">
+                </div>
+                <div class="screen"><label >MBOZWA</label><br><label id="Voicename"></label></div>
+                
+                <div class='inputsnum'>
+                    <label>sustain</label>
+                    <input id="Delay" type="number" min="1" max="1000" step="any" value="500">
+                </div>
+                <div class='inputsnum'>
+                    <label>voices</label>
+                    <select>
+                        <option>none</option>
+                    </select>
+                </div>
+            </header>
+            <main>
+                
+
+                
+            </main>
+            <footer>
+                
+            </footer>
+        </div>
+    </div>
+
+</body>
+<script >
+    const context = new AudioContext()
+</script>
+<script src="reload/reload.js"></script>
+<script src="UI/piano.js"></script>
+<script src="qwerty.js"></script>
+
+</html>
