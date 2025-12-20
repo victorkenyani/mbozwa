@@ -4,7 +4,7 @@ let qwe = ["q", "2", "w", "3", "e", "r", "5", "t", "6", "y", "7", "u", "i", "9",
 
 var oct=3
 document.onkeydown=(e)=>{
-	e.preventDefault()
+	// e.preventDefault()
 	try{
 		const pid = qwe.indexOf(e.key.toLowerCase())
 		if (pid==-1) {
