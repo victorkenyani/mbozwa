@@ -2,14 +2,18 @@
 
 let qwe = ["q", "2", "w", "3", "e", "r", "5", "t", "6", "y", "7", "u", "i", "9", "o", "0", "p", "[", "=", "]","backspace","shift","a","z","x","d","c","f","v","b","h","n","j","m","k",",",".",";","/","'",]
 
-var oct=3
+var oct=4
 document.onkeydown=(e)=>{
 	// e.preventDefault()
 	try{
 		const pid = qwe.indexOf(e.key.toLowerCase())
 		if (pid==-1) {
 			if (e.key=" ") {
-				console.log("play")
+				if(checkif.isplaying){
+					stop_.click()
+				}else{
+					play_.click()
+				}
 			}
 		}else{
 			const id = pid+(12*oct)

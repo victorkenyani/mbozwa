@@ -41,13 +41,19 @@ function drawkeys(argument) {
 		btn.onpointerdown=function(){
 			if (this.style.backgroundColor=='') {
 				this.style.backgroundColor='yellow'
-			playsound(this.id)
+				playsound(this.id)
 			}
 		}
 		btn.onpointerup=function(){
 			if (this.style.backgroundColor=='yellow') {
 				this.style.backgroundColor=''
-			stopsound(this.id)
+				stopsound(this.id)
+			}
+		}
+		btn.onpointerout=function(){
+			if (this.style.backgroundColor=='yellow') {
+				this.style.backgroundColor=''
+				stopsound(this.id)
 			}
 		}
 	}
@@ -82,6 +88,13 @@ function drawkeys(argument) {
 			
 		}
 		btn.onpointerup=function(){
+			if (this.style.backgroundColor=='yellow') {
+				this.style.backgroundColor=''
+				stopsound(this.id)
+			}
+		}
+		btn.onpointerout=function(){
+			console.log('cc')
 			if (this.style.backgroundColor=='yellow') {
 				this.style.backgroundColor=''
 				stopsound(this.id)
@@ -149,10 +162,9 @@ function PLAY(fr) {
         gain[i].gain.linearRampToValueAtTime(1,now + data_.Attack/100)
         gain[i].gain.linearRampToValueAtTime(0,now + data_.Attack/100 + data_.Release/(1000-Delay.value))
         gain[i].gain.setValueAtTime(0.0, now)
-
     }    
 }
 
 
 const Allkeys = document.querySelectorAll('.keys'), pianoholder =document.querySelector('.pianoholder')
-// sreen_piano_holder.scrollLeft = 0
+document.querySelector('.pianoholder').scrollLeft = 100
