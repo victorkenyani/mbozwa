@@ -93,6 +93,5 @@ function stkPush(tokens, pn, amnt){
 
 createToken(254721173446,10)
 
-module.exports={createToken}
 
 
