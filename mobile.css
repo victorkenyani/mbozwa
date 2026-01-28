@@ -1,0 +1,26 @@
+@media screen and (orientation:portrait){
+	:root{
+		--HEADER-HEIGHT:5%;
+		--MAIN-HEIGHT:47.5%;
+	}
+	#phone, header{
+		display: none;
+	}
+	#container{
+		align-content: flex-start;
+	}
+	.blackdiv{
+		font-size: 0.7rem;
+	}
+	.blackdiv span{
+	}
+	#div22{
+		color: transparent;
+	}
+	
+	/*body{
+		width: var(--WIDTH);
+		height: var(--HEIGHT);
+		transform: rotateZ(90deg);
+	}*/
+}
