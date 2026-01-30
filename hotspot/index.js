@@ -14,6 +14,7 @@ app.get("/",(req, res)=>{
 })
 
 app.use("/request",require("./router/request"))
+app.use("/addUser",require("./router/addUser"))
 reload(app).then(function (reloadReturned) {
 	
 	}).catch(function (err) {
