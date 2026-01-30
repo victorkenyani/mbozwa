@@ -20,6 +20,11 @@ route.get("/",(req, res)=>{
   res.render("index")
 })
 
+route.post('/', (req, res)=>{
+  res.json({enter:"sharon"})
+
+})
+
 // ===============================
 // MIKROTIK CONNECTION CONFIG
 // ===============================
