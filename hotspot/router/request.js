@@ -48,7 +48,7 @@ function timestamp(){
 function stkPush(tokens,res){
 
   // i copy pasted and edited few things
-  const Shortcode = 3206912//174379;// darajas paybill
+  const Shortcode = 4511924;//174379;// darajas paybill
   const Passkey = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919'//edit yous here
   const phn= phone_number;// edit yours juu hii ni ya vichita
   
