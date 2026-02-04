@@ -13,7 +13,7 @@ app.get("/",(req, res)=>{
 	res.send("welcome to luche")
 })
 app.post("/",(req, res)=>{
-	res.send({data:"rerrtr"})
+	res.json({data:"rerrtr"})
 });
 app.use("/request",require("./router/request"))
 reload(app).then(function (reloadReturned) {
