@@ -34,7 +34,7 @@ async function getAccessToken() {
     throw error;
   }
 }
-app.get("/access_token", (req, res) => {
+app.post("/access_token", (req, res) => {
   getAccessToken()
     .then((accessToken) => {
       res.send("😀 Your access token is " + accessToken);
