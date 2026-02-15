@@ -9,7 +9,7 @@ const server = require('http').Server(app);
 
 app.use(express.static("./home"))
 app.use(bodyParser.json());
-app.set('trust proxy', true); 
+app.set('trust proxy', true);
 app.get('/get-ip', (req, res) => {
   const clientIp = req.ip; // This will now hold the client's actual IP
   res.json({ ip: clientIp });
