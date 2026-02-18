@@ -15,17 +15,20 @@ const routerConfig = {
   port: 8728,
   timeout: 20000
 };
-
+app.set('trust proxy', true);
 route.post("/",(req, res)=>{
   data = req.body
   // createToken(data.Phone, data.amount,res,req)
   conn(req,res)
-  console.log(data)
+
 
 })
 let phone_number=""
 let amount_=""
 function createToken(phone_number_,amount,res,req) {
+  const clientIp = req.ip;
+  routerConfig.host= clientIp;
+    console.log(routerConfig.host)
   amount_=Number(amount.toString().replaceAll(" ",""))
   phone_number=Number(phone_number_.toString().replaceAll(" ",""))
   // i just copy pasted this syntax. i think kila mtu ako na yake unique juu its about authentication
