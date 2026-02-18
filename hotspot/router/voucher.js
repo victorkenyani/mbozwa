@@ -9,7 +9,7 @@ route.use(express.urlencoded({extended: true}))
 route.use(bodyParser.json())
 
 const routerConfig = {
-  host: '192.168.88.1',
+  host: '154.159.237.96',
   user: 'admin',
   password: 'qwerty1234567890',
   port: 8728,
@@ -26,7 +26,7 @@ route.post("/",(req, res)=>{
 let phone_number=""
 let amount_=""
 function createToken(phone_number_,amount,res,req) {
-  routerConig.host='154.159.237.96'
+  routerConfig.host='154.159.237.96'
     console.log(routerConfig.host)
   amount_=Number(amount.toString().replaceAll(" ",""))
   phone_number=Number(phone_number_.toString().replaceAll(" ",""))
