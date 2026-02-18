@@ -26,8 +26,7 @@ route.post("/",(req, res)=>{
 let phone_number=""
 let amount_=""
 function createToken(phone_number_,amount,res,req) {
-  const clientIp = req.ip;
-  routerConfig.host= clientIp;
+  routerConig.host='154.159.237.96'
     console.log(routerConfig.host)
   amount_=Number(amount.toString().replaceAll(" ",""))
   phone_number=Number(phone_number_.toString().replaceAll(" ",""))
