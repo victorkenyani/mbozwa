@@ -15,7 +15,7 @@ const routerConfig = {
   port: 8728,
   timeout: 20000
 };
-route.set('trust proxy', true);
+
 route.post("/",(req, res)=>{
   data = req.body
   // createToken(data.Phone, data.amount,res,req)
