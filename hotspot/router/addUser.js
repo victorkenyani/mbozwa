@@ -76,7 +76,7 @@ route.post('/enable', async (req, res) => {
 
   username=newUser().username
   password=newUser().password
-  res.redirect("http://mbozwa.spot/login2.html?"+username)
+  res.json({user:username})
   //console.log(username, password)
   const conn = new RouterOSClient(routerConfig);
 
