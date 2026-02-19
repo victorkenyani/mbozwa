@@ -30,7 +30,7 @@ route.post('/', (req, res)=>{
 // MIKROTIK CONNECTION CONFIG
 // ===============================
 const routerConfig = {
-  host: '152.159.237.96',
+  host: '192.168.88.1',
   user: 'admin',
   password: 'qwerty1234567890',
   port: 8728,
@@ -76,7 +76,7 @@ route.post('/enable', async (req, res) => {
 
   username=newUser().username
   password=newUser().password
-  res.json({user:username})
+  // res.json({user:username})
   //console.log(username, password)
   const conn = new RouterOSClient(routerConfig);
 
@@ -120,7 +120,7 @@ route.post('/enable', async (req, res) => {
     }
     console.log(voucher_)
     //res.redirect("http://mbozwa.spot/login2.html?"+username)
-    //res.json(voucher_);
+    res.json(voucher_);
 
   } catch (err) {
     res.status(500).json({ error: err.message });
