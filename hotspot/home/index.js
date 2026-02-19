@@ -7,6 +7,7 @@ for(let plan of leb){
 	plan.addEventListener('click', selected_plan)
 }
 
+Prices.append(box)
 let phone_number=''
 let amount_ = ''
 
