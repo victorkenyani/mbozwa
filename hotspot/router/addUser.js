@@ -65,7 +65,7 @@ route.post('/enable', async (req, res) => {
 
   // const { minutes } = req.body;
   const  data  = req.body;
-  const  minutes  = Number(data.time)
+  const  minutes  = 5//Number(data.time)
   console.log('minutes', minutes)
   if (minutes == null) {
     // return res.status(400).json({ error: "minutes is required" });
