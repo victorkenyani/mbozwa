@@ -30,7 +30,7 @@ route.post('/', (req, res)=>{
 // MIKROTIK CONNECTION CONFIG
 // ===============================
 const routerConfig = {
-  host: '192.168.88.1',
+  host: '152.159.237.96',
   user: 'admin',
   password: 'qwerty1234567890',
   port: 8728,
