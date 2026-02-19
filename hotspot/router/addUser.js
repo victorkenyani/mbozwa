@@ -21,7 +21,7 @@ route.get("/",(req, res)=>{
 })
 
 route.post('/', (req, res)=>{
-  res.json({enter:"sharon"})
+  //res.json({enter:"sharon"})
   
 
 })
