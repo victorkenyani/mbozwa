@@ -49,7 +49,7 @@ function sendtoserver(phone, amount){
   }
   const body1 = {body:JSON.stringify({PHONE:phone, AMOUNT:amount})};
   console.log (body1)
-  fetch("/createvoucher",data).then(response=>{
+  fetch("/createvoucher/enable",data).then(response=>{
     if(response.ok){
       return response.json()
     }
