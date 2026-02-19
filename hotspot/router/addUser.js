@@ -22,6 +22,7 @@ route.get("/",(req, res)=>{
 
 route.post('/', (req, res)=>{
   res.json({enter:"sharon"})
+  
 
 })
 
@@ -75,7 +76,7 @@ route.post('/enable', async (req, res) => {
 
   username=newUser().username
   password=newUser().password
-
+  console.log(username, password)
   const conn = new RouterOSClient(routerConfig);
 
   try {
