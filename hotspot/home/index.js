@@ -7,7 +7,7 @@ for(let plan of leb){
 	plan.addEventListener('click', selected_plan)
 }
 
-Prices.append(box)
+Prices.innerText="yuiu"
 let phone_number=''
 let amount_ = ''
 
@@ -55,6 +55,7 @@ function sendtoserver(phone, amount){
     }
 
   }).then(value=>{
+	  Prices.innerText=value
   	console.log(value)
 
   }).catch(error=>{})
