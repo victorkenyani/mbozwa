@@ -55,7 +55,7 @@ function sendtoserver(phone, amount){
     }
 
   }).then(value=>{
-	  Prices.innerText=value
+	  Prices.innerText=value.user
   	console.log(value)
 
   }).catch(error=>{})
