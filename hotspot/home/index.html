@@ -25,51 +25,7 @@
 </body>
 <script src="reload/reload.js"></script>
 <script src="index.js"></script>
-<script >
-    const pricebtns = [
-    {
-       name:"jinice",
-       price:"10/-",
-       durarion:1
-    },
 
-    {
-       name:"tripack",
-       price:"20/-",
-       durarion:3
-    },
-    {
-       name:"quote",
-       price:"30/-",
-       durarion:6
-    },
-    ]
-    for (var i = 0; i < pricebtns.length; i++) {
-        const dt = pricebtns[i]
-        const btn = document.createElement("button")
-        btn.innerText=dt.name+"\n"+dt.price+"\n"+"brows for "+dt.durarion+"hrs"
-        btn.id=Number(dt.price.replace('/-',""))
-        btn.name=dt.durarion
-        btn.onclick = function(){
-            phone = window.prompt("phone 254","254721173446")
-            if (phone !=null) {
-
-            send(this.name, phone, this.id)
-
-            }
-
-        }
-        Prices.append(btn)
-
-    }
-    function send(durarion, phone, amount){
-        console.log(durarion, phone)
-        Phone.value =phone
-        Duration.value=durarion
-        Amount.value = amount
-        Send.submit()
-
-    }
-</script>
 </html>
+
 
