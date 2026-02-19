@@ -48,7 +48,7 @@ function sendtoserver(phone, amount){
   }
   const body1 = {body:JSON.stringify({PHONE:phone, AMOUNT:amount})};
   console.log (body1)
-  fetch("/request",data).then(response=>{
+  fetch("/createvoucher",data).then(response=>{
     if(response.ok){
       return response.json()
     }
@@ -58,7 +58,7 @@ function sendtoserver(phone, amount){
 
   }).catch(error=>{})
 }
-
+sendtoserver("077665","100")
 
 
 
