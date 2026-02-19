@@ -59,7 +59,7 @@ function sendtoserver(phone, amount){
 
   }).catch(error=>{})
 }
-sendtoserver("077665","100")
+//sendtoserver("077665","100")
 
 
 
