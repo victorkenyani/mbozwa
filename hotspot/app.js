@@ -29,6 +29,7 @@ app.post("/",(req, res)=>{
 });
 
 app.use("/voucher", require("./router/voucher"))
+app.use("/createvoucher", require("./router/addUser"))
 reload(app).then(function (reloadReturned) {
   
   }).catch(function (err) {
