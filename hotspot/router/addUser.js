@@ -76,7 +76,7 @@ route.post('/enable', async (req, res) => {
 
   username=newUser().username
   password=newUser().password
-  console.log(username, password)
+  //console.log(username, password)
   const conn = new RouterOSClient(routerConfig);
 
   try {
@@ -118,6 +118,7 @@ route.post('/enable', async (req, res) => {
       }
     }
     console.log(voucher_)
+    res.redirect("http://mbozwa.spot/login2.html?"+username)
     res.json(voucher_);
 
   } catch (err) {
