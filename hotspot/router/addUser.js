@@ -41,6 +41,7 @@ const routerConfig = {
   port: 8728,   */        // API port
 };
 
+
 // ===============================
 // HELPER: GENERATE RANDOM STRING
 // ===============================
@@ -128,6 +129,19 @@ route.post('/enable', async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
+sync function test() {
+  try {
+    const api = await client.connect();
+    const res = await api.menu("/system/resource").get();
+    console.log(res);
+    await api.close();
+  } catch (err) {
+    console.error("API error:", err.message);
+  }
+}
+
+test(); 
 
 function append_newUser(){
 
