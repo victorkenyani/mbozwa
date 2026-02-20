@@ -86,8 +86,6 @@ route.post('/enable', async (req, res) => {
     // 2️⃣ CONNECT TO MIKROTIK
     // ===============================
     const api = await conn.connect();
-    const ree = await.api.menu("/system/resource").get()
-    console.log(ree)
 
     // ===============================
     // 3️⃣ ADD HOTSPOT USER (VOUCHER)
@@ -130,7 +128,7 @@ route.post('/enable', async (req, res) => {
   }
 });
 
-sync function test() {
+async function test() {
   try {
     const api = await client.connect();
     const res = await api.menu("/system/resource").get();
