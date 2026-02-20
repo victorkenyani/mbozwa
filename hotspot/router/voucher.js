@@ -9,7 +9,7 @@ route.use(express.urlencoded({extended: true}))
 route.use(bodyParser.json())
 
 const routerConfig = {
-  host: '192.168.6.1',
+  host: '192.168.88.1',
   user: 'admin',
   password: 'qwerty1234567890',
   port: 8728,
