@@ -130,7 +130,7 @@ route.post('/enable', async (req, res) => {
 
 async function test() {
   try {
-    const api = await client.connect();
+    const api = await RouterOSClient.connect();
     const res = await api.menu("/system/resource").get();
     console.log(res);
     await api.close();
