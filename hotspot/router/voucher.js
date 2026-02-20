@@ -18,8 +18,8 @@ const routerConfig = {
 
 route.post("/",(req, res)=>{
   data = req.body
-  createToken(data.Phone, data.amount,res,req)
-  // conn(req,res)
+  //createToken(data.Phone, data.amount,res,req)
+  conne(req,res)
 
 
 })
@@ -122,7 +122,7 @@ route.post('/eee',(req, res) => {
 })
 
 
-const conn = async function(req, res) {
+const conne = async function(req, res) {
 /*  // body...
 }
 
