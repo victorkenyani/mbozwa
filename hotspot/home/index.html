@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="pragma" content="no-cache" />
     <meta http-equiv="expires" content="-1" />
-    <!-- <meta http-equiv="refresh" content="0; url=http://localhost:3000"> -->
+   <!-- <meta http-equiv="refresh" content="0; url=https://mbozwa.onrender.com/voucher">-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Internet hotspot - Log in</title>
@@ -17,17 +17,58 @@
     <div id="Prices">
         
     </div>
-    <button onclick="sendtoserver('077665','100')">connect</button>
-    <form id="Send" method="post" action="https://mbozwa.onrender.com/voucher">
+    <form id="Send" method="post" action="voucher">
+        <!-- <form id="Send" method="post" action="https://mbozwa.onrender.com/voucher"> -->
         <input type="hidden" name="Phone" id="Phone">
         <input type="hidden" name="amount" id="Amount">
         <input type="hidden" name="Duration" id="Duration">
     </form>
 </body>
 <script src="reload/reload.js"></script>
-<script src="index.js"></script>
+<script >
+    const pricebtns = [
+    {
+       name:"jinice",
+       price:"10/-",
+       durarion:1
+    },
 
+    {
+       name:"tripack",
+       price:"20/-",
+       durarion:3
+    },
+    {
+       name:"quote",
+       price:"30/-",
+       durarion:6
+    },
+    ]
+    for (var i = 0; i < pricebtns.length; i++) {
+        const dt = pricebtns[i]
+        const btn = document.createElement("button")
+        btn.innerText=dt.name+"\n"+dt.price+"\n"+"brows for "+dt.durarion+"hrs"
+        btn.id=Number(dt.price.replace('/-',""))
+        btn.name=dt.durarion
+        btn.onclick = function(){
+            phone = window.prompt("phone 254","254721173446")
+            if (phone !=null) {
+
+            send(this.name, phone, this.id)
+
+            }
+
+        }
+        Prices.append(btn)
+
+    }
+    function send(durarion, phone, amount){
+        console.log(durarion, phone)
+        Phone.value =phone
+        Duration.value=durarion
+        Amount.value = amount
+        Send.submit()
+
+    }
+</script>
 </html>
-
-
-
