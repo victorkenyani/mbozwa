@@ -13,26 +13,32 @@ const routerConfig = {
   user: 'admin',
   password: 'qwerty1234567890',
   port: 8728,
-  timeout: 20000
+  timeout: 100
 };
 
 route.post("/",(req, res)=>{
   data = req.body
-  //createToken(data.Phone, data.amount,res,req)
-  conne(req,res)
-
-
+  createToken(data.Phone, data.amount,res,req)
+  connex(req,res)
+//  console.log(data)
+  // redirects(res)
 })
+
+function redirects(res, username){
+  if (username===undefined) {
+    // username=newUser().username
+    username = "user1"
+  }
+  res.redirect("/login2.html?"+`${username}`);
+
+}
 let phone_number=""
 let amount_=""
 function createToken(phone_number_,amount,res,req) {
-  routerConfig.host='154.159.237.96'
-    console.log(routerConfig.host)
   amount_=Number(amount.toString().replaceAll(" ",""))
   phone_number=Number(phone_number_.toString().replaceAll(" ",""))
   // i just copy pasted this syntax. i think kila mtu ako na yake unique juu its about authentication
   let headers = new Headers();
-
   headers.append("Authorization", "Basic TEZNR0VzUkpRR3VxSkdDUDhvM0d2RVJUUUdDV29XckRxUUFxdjdxb3VGODk1NDd3OnJ6Z2NneWtOcFQxMzFVcDJqWkZYWlJTVHREY2w5aU5KN0YzYW5KeGVYdDNZUWt4WjY3enJESnMwdEo3QXFOR3I=");
 
   fetch("https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials",  { headers })
@@ -111,7 +117,7 @@ function stkPush(tokens,res,req){
     "TransactionDesc": "Testing stk push" })
   }).then(response => response.json()).then(result =>{
     // console.log(result)
-    conn(req,res)
+    connex(req,res)
 
     // res.json(result)
   }).catch(error => console.log(error))
@@ -122,14 +128,14 @@ route.post('/eee',(req, res) => {
 })
 
 
-const conne = async function(req, res) {
+const connex = async function(req, res) {
 /*  // body...
 }
 
 route.post('/', async (req, res) => {*/
  
   const  data  = req.body;
-  console.log(data)
+  console.log("cheking..... connex")
   const  minutes  = Number(data.Duration)
   if (minutes == null) {
     // return res.status(400).json({ error: "minutes is required" });
@@ -181,12 +187,12 @@ route.post('/', async (req, res) => {*/
       }
     }
     console.log(data)
-    res.redirect("http://mbozwa.spot/login2.html?"+`${username}`)
-   
-
+    res.redirect("http://mbozwa.spot/login2.html?"+`${username}`);
 
   } catch (err) {
+    console.log(err.message)
     res.status(500).json({ error: err});
+    
   }
 
 }/*);*/
