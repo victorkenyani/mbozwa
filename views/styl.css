@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+.outer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rosybrown;
+    overflow: hidden;
+}
+main{
+    margin: 2pt;
+    position: relative;
+    background-color: darkred;
+}
+header{
+    height: 10%;
+}
+main, footer{
+    position: relative;
+    height: 44%;
+    width: 100%;
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+
+.keys{
+    position: absolute;
+    width: 39px;
+    display: flex;
+    justify-content:center ;
+    align-items: end;
+    border-radius: 0px 0px 6px 6px;
+}
+.white{
+    height: 92%;
+    
+}
+.black{
+    height: 60%;
+    width: 30px;
+    background-color: gray;
+}
+#canvas{
+    background-color: gray;
+    position: relative;
+    overflow: hidden;
+}
