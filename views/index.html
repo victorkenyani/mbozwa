@@ -10,10 +10,37 @@
 <body>
     <div class="outer">
         <header>
+            <div id="transpos">
+                <button id="TL" onclick="transposL()">L</button>
+            </div>
+            <div id="Voices_div">
+                <select id='Voices'>
+                  <option class="Voices_option" value='{"attack":0.01,"release":0.591,"type":"sine"}'  selected>TONE1</option>
+                  
+                  <option class="Voices_option" value='{"attack":0.015,"release":0.6,"type":"square"}'>TONE2</option>
+
+                  <option class="Voices_option" value='{"attack":0.015,"release":0.6,"type":"sawtooth"}'
+                  >TONE3</option>
+
+                  <option class="Voices_option" value='{"attack":0.015,"release":0.6,"type":"triangle"}'
+                  >TONE4</option>
+                  
+                </select><br>
+            </div>
             <button onclick="REC()">REC</button>
             <button onclick="PLAY()">PLAY</button>
             <button onclick="STOP()">STOP</button>
             <button onclick="CLEAR()">CLEAR</button>
+            <div id="slides">
+                <p>GAIN</p>
+                <input type="range" id="Gain" max="1" min="0" step="0.001">
+                <p>ATTACK</p>
+                <input type="range" value="0.001" id="Attack" max="10" min="0.0" step="0.01">
+                <p>RELEASE</p>
+                <input type="range" value="0.591" id="Release" max="5" min="0.001" step="0.01">
+
+            </div>
+            
         </header>
         <main id="Body_"></main>
         <footer id="footer">
@@ -21,12 +48,22 @@
         </footer>
     </div>
 </body>
+<script>
+    const audioCtx= new AudioContext()
+    function freq(num){
+        //num +=(12*2)
+        const a = 440
+        return (a/32)*(2**((num-9)/12))
+    }
+    
+</script>
 <script src="reload/reload.js"></script>
 <script src="Allkeys.js"></script>
 <script src="keyinput.js"></script>
 <script src="midi.js"></script>
 <!-- <script src="sound/sound.js"></script> -->
-<script src="sound/sound2.js"></script>
+<!-- <script src="sound/sound2.js"></script> -->
+<script src="sound/sound3.js"></script>
 <script src="classCanvas.js"></script>
 
 </html>

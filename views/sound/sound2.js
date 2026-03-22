@@ -29,10 +29,7 @@ const MTone = (velocity, Mosc_) =>{
 		gain2=MTone_Gen(gain)
 		Mosc_.connect(gain2)
 		gain.connect(audioCtx.destination)
-		setTimeout(()=>{
-			// gain.gain.value=0
-			// audioCtx.suspend()
-		},500)
+		
 	}
 	return gain
 }
@@ -66,10 +63,6 @@ function Mplay(pos,velocity=0.8){
 	return Mosc
 
 }
-function freq(num){
-	//num +=(12*2)
-    const a = 440
-    return (a/32)*(2**((num-9)/12))
-}
+
 
 initosc()

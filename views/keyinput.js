@@ -1,5 +1,6 @@
 let pressedkey2 = {}
-function keydown_(id, velocity=50){
+function keydown_(id, velocity=75){
+    velocity/=100
     id=Number(id)
     try{
         document.getElementById(id).style.backgroundColor="yellow"
@@ -11,20 +12,22 @@ function keydown_(id, velocity=50){
 
     }
     // play(id, velocity/100)
-    const pk=Mplay(id, velocity)
-    pressedkey2[id+""] = pk
+    // const pk=Mplay(id, velocity)
+    const playedkey = sound3Play(id, velocity)
+    pressedkey2[id+""] = playedkey
 
     /*
         when recording
     */
     if (canvasClass.isRecording) {
 
-        canvasClass.drawRect(id, velocity/100)
+        canvasClass.drawRect(id, velocity)
     }
 }
 
 function keyup_(id){
     id=Number(id)
+    soundStop(id)
     try{
         document.getElementById(id).style.backgroundColor=""
 
@@ -36,6 +39,11 @@ function keyup_(id){
     }
     // document.getElementById(id).style.backgroundColor=""
     const pk =pressedkey2[id+""]
+    // pk.gain.linearRampToValueAtTime(0, audioCtx.currentTime+.5)
+
+    // pk.gain.value=0
+
+
     // pk.stop()
     // delete pressedkey2[id+""]
     // stop_(id)

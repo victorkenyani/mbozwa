@@ -55,3 +55,15 @@ main, footer{
     position: relative;
     overflow: hidden;
 }
+#slides{
+    margin-top: 15px;
+    display:flex;
+    overflow: auto;
+}
+#slides input{
+    width: 20%;
+}
+#TL, #Voices_div{
+    top: 0;
+    float: right;
+}
