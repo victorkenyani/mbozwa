@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>NOTES_READER</title>
+</head>
+<body>
+	<header>
+			<label for="Volume" id="id_vol" style="width:150px; text-align: left; display: inline-block; "></label>
+			<input style="" type="range" id="Volume" min="0" max="9" value="1" oninput="gaincahang(value)">
+
+			<label for="TEMPO" id="id_TEMPO" style="width:150px; text-align: left; display: inline-block; "></label>
+			<input style="" type="range" id="TEMPO" min="30" max="300" value="60" step="2">
+
+		<div id="buttons">
+			
+			<button id="id_play">play</button>
+			<button id="id_stop">stop</button>
+			<button id="id_save">save</button>
+			<!-- <button id="id_read">read</button> -->
+			<button id="id_clear">clear</button>
+			<input style="display: none;" id="file" type="file" name="">
+			<select style="width: 130px;" id="SONGS" oninput="load(value)">
+				<option value="0">no song</option>
+			</select>
+			<input id="timelapse" type="number" name="" min="" step="1" value="0">
+			<label style="width: 100;" id="title"></label>
+
+			<!-- <button onclick="encrypt1()">LOADD</button> -->
+
+		</div>
+		<div id="minimenu">
+			<!-- <select id="id_NOTESELECTOR" onchange="getnote(value)">
+				<option selected value="-1">none</option>
+				<option value="1">full note</option>
+				<option value="0.5">half note</option>
+				<option value="0.25">quater note</option>
+				<option value="0.125">eigth note</option>
+				<option value="0.0625">sixteeth note</option>
+
+			</select> -->
+			<!-- <button id="id_tools">tools</button> -->
+		</div>
+		
+	</header>
+	
+	<main id="main">
+		<canvas id="canvas"></canvas>
+	</main>
+	<footer></footer>
+
+	<!-- <section id="id_Stools">
+			
+			<div id="tabs">
+				<button class="tabs_button">notes</button>
+				<button class="tabs_button">gain</button>
+				<button class="tabs_button">tab3</button>
+				<button class="tabs_button">tab4</button>
+				<button class="tabs_button">tab5</button>
+				<button class="tabs_button">tab6</button>
+				
+			</div>
+			<div class="tabs_" id="gain">
+				<label id="id_Ltempo" for="id_tempo">SPEED</label>
+				<input type="range" max="600" min="10" id="id_tempo" value="60" oninput="setSpeed(value)" name="">
+			</div>
+			<div class="tabs_" id="notes">
+				<button class="menu_item">full note</button>
+				<button class="menu_item">half note</button>
+				<button class="menu_item">quater note</button>
+				<button class="menu_item">eight note</button>
+				<button class="menu_item">sixteenth note</button>
+				
+			</div> --
+			
+	</section> -->
+
+</body>
+<script src="reload/reload.js"></script>
+<script src="DEFINATION.js"></script>
+<script src="render.js"></script>
+<script src="GRAPHICS.js"></script>
+<script src="PIANO.js"></script>
+<script src="voice.js"></script>
+<script src="canvaslistener.js"></script>
+<script src="keyboard.js"></script>
+<script src="PLAYER.js"></script>
+<script src="files.js"></script>
+<script>
+	function live() {
+		requestAnimationFrame(live)
+		Graphics.REFRESH()
+	}
+	// live()
+	// id_read.click()
+	loadDATA()
+	holder.scrollTopMax = holder.scrollTopMax/2
+	PIANO.scrollLeft = PIANO.scrollLeftMax*0.25
+
+</script>
+
+
+
+</html>
