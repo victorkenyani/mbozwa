@@ -1,0 +1,47 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+}
+#frameHolder{
+	align-self: center;
+	position: absolute;
+	width: 99vw;
+	height: 98vh;
+}
+header, main, footer{
+	display: block;
+	position: relative;
+}
+header{
+	border: 1px solid black;
+	height: 10%;
+}
+footer{
+	border: 1px solid black;
+	height: 25%;
+}
+main{
+	border: 1px solid darkred;
+	height: 65%;
+}
+@media only screen and (orientation: landscape) {
+	body {
+    	/*background-color: lightblue;*/
+  	}
+}
+
+@media only screen and (orientation: portrait) {
+	#frameHolder{
+		transform: rotateZ(90deg);
+		width: 99vh;
+		height: 98vw;
+	}
+}

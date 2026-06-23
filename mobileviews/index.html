@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="stylemain.css">
+	<link rel="stylesheet" type="text/css" href="styleheader.css">
+	<link rel="stylesheet" type="text/css" href="stylefooter.css">
+	<title>MOBL</title>
+</head>
+<body>
+	<div id="frameHolder">
+		<header>
+			<label style="width:100px" id="title">TITLE : MBOZWA</label> 
+			<button onclick="Save()">Save</button>
+			<button onclick="load()">read</button>
+			<button onclick="invert()">invert</button>
+			<br>
+		</header>
+		<main>
+			<canvas id="canvas"></canvas>
+		</main>
+		<footer></footer>
+		
+	</div>
+</body>
+<script src="reload/reload.js"></script>
+<script src="DEFINATION.js"></script>
+<script src="SETUP.js"></script>
+<script src="MATRIX.js"></script>
+<script src="RENDER.js"></script>
+<script src="CANVAS.js"></script>
+<script src="MIDI.js"></script>
+<script src="PIANO.js"></script>
+<script src="MOUSE.js"></script>
+<script src="KEYBOARD.js"></script>
+<script src="PLAYER.js"></script>
+<script src="SOUND.js"></script>
+<script src="FILES.js"></script>
+<script>
+	function forceScreen() {
+		Canvas_class.Width=(get_LASTNOTE()+2)*STEP 
+		Canvas_class.Update()
+	}
+	Startconverter()
+
+	// Canvas_class.Width = (get_LASTNOTE()+2)*STEP
+	// Canvas_class.Update()
+</script>
+
+</html>

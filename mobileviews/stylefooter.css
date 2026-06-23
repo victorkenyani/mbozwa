@@ -1,0 +1,23 @@
+.keys{
+	position: absolute;
+	border-radius: 0px 0px 6px 6px;
+	display: flex;
+	justify-content: center;
+	align-items:end ;
+	top: 0px;
+	border-width: 1px;
+}
+.black{
+	background-color: gray;
+	height: 55%;
+
+}
+.white{
+	height: 95%;
+	background-color: floralwhite;
+}
+footer{
+	position: relative;
+	overflow: auto;
+	scroll-behavior: smooth;
+}
